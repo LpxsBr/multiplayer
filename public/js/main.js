@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io({transports: ['websocket']});
 
 var square = document.getElementById('square');
 var events = document.getElementById('events');

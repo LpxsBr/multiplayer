@@ -26,4 +26,8 @@ io.on('connection', (socket)=>{
     })
 })
 
+socket.on('disconnect', function() {
+    console.log('Socket disconnected');
+  });
+
 server.listen(8888, (req, res)=>console.log('serving on 8888'));
