@@ -1,12 +1,17 @@
 import express  from "express";
 import { Server } from "socket.io";
-import { createServer } from "node:http";
+import { createServer } from "node:http";import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 
 const server = createServer(app);
 
-app.use(express.static('public'))
+app.use(express.static(__dirname+'/../public'))
+// console.log(__dirname+'/../public');
 
 app.get('/api/', (req, res)=>res.json('aeeeh'))
 
