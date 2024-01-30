@@ -8,6 +8,8 @@ const server = createServer(app);
 
 app.use(express.static('public'))
 
+app.get('/api/', (req, res)=>res.json('aeeeh'))
+
 const io = new Server(server)
 
 io.on('connection', (socket)=>{
