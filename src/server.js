@@ -26,7 +26,7 @@ io.on('connection', (socket)=>{
     })
 })
 
-socket.on('disconnect', function() {
+io.on('disconnect', function() {
     console.log('Socket disconnected');
   });
 
